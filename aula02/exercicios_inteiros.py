@@ -32,7 +32,7 @@
 # num1 = int(input("Digite um número: "))
 # num2 = int(input("Digite outro número: "))
 
-# divisao = int(num1/num2)
+# divisao = num1//num2
 
 # print(f"A divisão entre {num1} e {num2} é de {divisao}")
 
