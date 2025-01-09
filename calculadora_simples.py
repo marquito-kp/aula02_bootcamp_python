@@ -6,14 +6,19 @@
 print("# CALCULDORA SIMPLES #")
 
 while True:
-    num1 = float(input("Digite um número: "))
-    num2 = float(input("Digite outro número: "))
+    while True:
+        try:
+            num1 = float(input("Digite um número: "))
+            num2 = float(input("Digite outro número: "))
+            break
+        except ValueError:
+            print("Insira um número válido!\n Tente novamente")
     try:
         operador = input("Selecione o operador da conta:\n (+) - soma\n (-) - Subtração\n (*) - Multiplicação\n (/) - Divisão\nSua escolha: ")
         if operador not in ['+','-','*','/']:
             raise ValueError("Operador inválido.")
     except ValueError as e:
-        print(f"{e} Tente novamente!")
+        print(f"{e}\nsTente novamente!")
     if operador == "+":
         soma = num1 + num2
         print(f"Resultado: {soma}")
